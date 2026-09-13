@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  direction: rtl;
+}
+
+.hero {
+  position: relative;
+  padding: 40px 20px 36px;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(120px 90px at 78% 20%, rgba(192, 138, 62, 0.28), transparent 70%),
+    radial-gradient(160px 120px at 15% 10%, rgba(139, 58, 58, 0.14), transparent 70%);
+}
+
+.heroEyebrow {
+  font-size: 14px;
+  color: var(--gold-deep);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0 0 12px;
+  letter-spacing: 0.2px;
+}
+
+.hero p {
+  max-width: 440px;
+  margin: 0 auto;
+  color: #5a4c3e;
+  font-size: 15.5px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.fieldLabel {
+  display: block;
+  font-weight: 700;
+  font-size: 14.5px;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.sectionTitle {
+  font-size: 19px;
+  font-weight: 900;
+  margin: 32px 0 6px;
+}
+
+.sectionSub {
+  color: #6b5d4e;
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.yesnoRow {
+  display: flex;
+  gap: 12px;
+  direction: rtl;
+}
+
+.ynOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  background: var(--parchment-deep);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.ynOption.checked {
+  border-color: var(--ink);
+  background: #fff;
+}
+
+.ynOption input[type='radio'] {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.subQuestion {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  direction: rtl;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-weight: 500;
+  background: var(--parchment-deep);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.chip.checked {
+  border-color: var(--ink);
+  background: #fff;
+  font-weight: 700;
+}
+
+.chip input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.otherInput {
+  margin-top: 10px;
+}
+
+.team {
+  position: relative;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, transform 0.1s;
+}
+
+.team:active {
+  transform: scale(0.997);
+}
+
+.teamHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  direction: rtl;
+}
+
+.teamHead input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  margin: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.teamEmoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.teamName {
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.teamDesc {
+  font-size: 14px;
+  color: #4a3f33;
+  white-space: pre-line;
+}
+
+.social {
+  background: var(--c-social-bg);
+}
+
+.social.checked {
+  border-color: var(--c-social);
+}
+
+.social .teamName {
+  color: var(--c-social);
+}
+
+.prayer {
+  background: var(--c-prayer-bg);
+}
+
+.prayer.checked {
+  border-color: var(--c-prayer);
+}
+
+.prayer .teamName {
+  color: var(--c-prayer);
+}
+
+.fun {
+  background: var(--c-fun-bg);
+}
+
+.fun.checked {
+  border-color: var(--c-fun);
+}
+
+.fun .teamName {
+  color: var(--c-fun);
+}
+
+.hymns {
+  background: var(--c-hymns-bg);
+}
+
+.hymns.checked {
+  border-color: var(--c-hymns);
+}
+
+.hymns .teamName {
+  color: var(--c-hymns);
+}
+
+.content {
+  background: var(--c-content-bg);
+}
+
+.content.checked {
+  border-color: var(--c-content);
+}
+
+.content .teamName {
+  color: var(--c-content);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--parchment);
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.15s;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.errorMsg {
+  color: #c05a5a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f8eaea;
+  border-radius: 8px;
+  border-right: 3px solid #c05a5a;
+}
+
+.confirm {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.bigEmoji {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.confirm h2 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 12px;
+}
+
+.confirm p {
+  font-size: 15px;
+  color: #5a4c3e;
+  margin: 0 0 24px;
+}
+
+.confirm button {
+  padding: 12px 24px;
+  background: var(--ink);
+  color: var(--parchment);
+  border: none;
+  border-radius: 8px;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.15s;
+}
+
+.confirm button:hover {
+  opacity: 0.9;
+}

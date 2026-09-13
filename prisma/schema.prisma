@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model FormSubmission {
+  id            String     @id @default(cuid())
+  name          String
+  phone         String
+  prevServed    String?
+  prevTeams     String[]   @default([])
+  currentServed String?
+  currentTeams  String[]   @default([])
+  skills        String[]   @default([])
+  wantTry       String[]   @default([])
+  teams         String[]   @default([])
+  notes         String?
+  submittedAt   DateTime   @default(now())
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@index([submittedAt])
+  @@index([teams])
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  password  String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

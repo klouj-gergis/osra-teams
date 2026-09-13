@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+
+:root {
+  --ink: #2a211b;
+  --parchment: #faf3e7;
+  --parchment-deep: #f1e6d3;
+  --gold: #c08a3e;
+  --gold-deep: #9c6c28;
+  --line: #e3d5b8;
+
+  --c-social: #3e7c82;
+  --c-social-bg: #eaf2f1;
+  --c-prayer: #8b3a3a;
+  --c-prayer-bg: #f6eae8;
+  --c-fun: #b8792a;
+  --c-fun-bg: #f8efdf;
+  --c-hymns: #6a5590;
+  --c-hymns-bg: #efeaf5;
+  --c-content: #3d6b47;
+  --c-content-bg: #e9f1ea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: var(--parchment);
+  color: var(--ink);
+  line-height: 1.6;
+  direction: rtl;
+}
+
+button {
+  font-family: 'Tajawal', sans-serif;
+}
+
+input,
+textarea,
+select {
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--parchment-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-deep);
+}
+
+
+input[type='text'],
+input[type='tel'],
+textarea {
+  width: 100%;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 15px;
+  background: var(--parchment-deep);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input[type='text']:focus,
+input[type='tel']:focus,
+textarea:focus {
+  border-color: var(--gold);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+:global(html, body) {
+  margin: 0;
+  padding: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1.7;
+  direction: rtl;
+}
