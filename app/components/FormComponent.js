@@ -182,7 +182,7 @@ export default function FormComponent() {
       `}</style>
 
       <div className={styles.hero}>
-        <div className={styles.heroEyebrow}>فرصتك تخدم</div>
+        <a href="/dashboard" className={styles.heroEyebrow}>فرصتك تخدم</a>
         <h1>استمارة اختيار التيم</h1>
         <p>انضم للتيم اللي بيناسبك وساعدنا نخلي كل اجتماع لا يُنسى</p>
       </div>
