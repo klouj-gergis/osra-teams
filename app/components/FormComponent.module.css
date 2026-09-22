@@ -18,10 +18,15 @@
 }
 
 .heroEyebrow {
-  font-size: 14px;
+  font-size: 10px;
   color: var(--gold-deep);
   font-weight: 700;
   margin-bottom: 10px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .hero h1 {
@@ -146,19 +151,8 @@
   margin-top: 10px;
 }
 
-.team {
-  position: relative;
-  border-radius: 14px;
-  padding: 18px 20px;
-  margin-bottom: 14px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border-color 0.15s, transform 0.1s;
-}
 
-.team:active {
-  transform: scale(0.997);
-}
+
 
 .teamHead {
   display: flex;
@@ -193,65 +187,6 @@
   white-space: pre-line;
 }
 
-.social {
-  background: var(--c-social-bg);
-}
-
-.social.checked {
-  border-color: var(--c-social);
-}
-
-.social .teamName {
-  color: var(--c-social);
-}
-
-.prayer {
-  background: var(--c-prayer-bg);
-}
-
-.prayer.checked {
-  border-color: var(--c-prayer);
-}
-
-.prayer .teamName {
-  color: var(--c-prayer);
-}
-
-.fun {
-  background: var(--c-fun-bg);
-}
-
-.fun.checked {
-  border-color: var(--c-fun);
-}
-
-.fun .teamName {
-  color: var(--c-fun);
-}
-
-.hymns {
-  background: var(--c-hymns-bg);
-}
-
-.hymns.checked {
-  border-color: var(--c-hymns);
-}
-
-.hymns .teamName {
-  color: var(--c-hymns);
-}
-
-.content {
-  background: var(--c-content-bg);
-}
-
-.content.checked {
-  border-color: var(--c-content);
-}
-
-.content .teamName {
-  color: var(--c-content);
-}
 
 .submitBtn {
   width: 100%;

@@ -8,15 +8,16 @@ const TEAM_LABELS = {
   prayer: 'تيم الصلاة',
   fun: 'التيم الترفيهي',
   hymns: 'تيم الترانيم',
-  content: 'تيم المحتوى'
+  content: 'تيم المحتوى',
+  theater: 'تيم المسرح',
 };
 
 const TEAMS_DATA = [
   {
-    key: 'social',
-    emoji: '📱',
-    name: 'تيم السوشيال ميديا',
-    desc: 'بتحب التصوير؟ 📸 بتعرف تعمل Reels؟ 🎥 عندك عين حلوة للتصميم؟ 🎨 بتحب تكتب وتطلع أفكار مختلفة؟ 💡\nنخلي الناس تشوف اللي بيحصل في اجتماعنا من خلالك 👀🔥\nمش شرط تكون محترف، المهم تكون عندك الرغبة تتعلم وتجرب ❤️'
+    key: 'content',
+    emoji: '💡',
+    name: 'تيم المحتوى',
+    desc: 'عندك فكرة ممكن تغيّر طريقة تفكير حد؟ بتحب تدور، تقرأ، تناقش وتفكر؟ 🤔 بتعرف تطلع أسئلة مختلفة؟\nإحنا التيم اللي ورا المواضيع اللي بنتكلم فيها في الاجتماع، من المناقشات والمواضيع الروحية للأسئلة اللي بتلمس حياتنا اليومية.\nمش لازم تكون عندك خبرة، المهم فضول وأفكار وحب إنك تتعلم وتشارك.'
   },
   {
     key: 'prayer',
@@ -24,12 +25,7 @@ const TEAMS_DATA = [
     name: 'تيم الصلاة',
     desc: 'يمكن تكون صلاتك سبب إن حد يكمل… يمكن كلمة منك في وقتها تغيّر يوم حد…\nلو بتحب الصلاة وعايز تخدم بيها، مستنيينك معانا. ❤️'
   },
-  {
-    key: 'fun',
-    emoji: '🎉',
-    name: 'التيم الترفيهي',
-    desc: 'لو عندك أفكار ألعاب محدش فكر فيها… لو بتحب المنافسة والضحك… ولو نفسك تخلي كل اجتماع فيه ذكريات 😂🔥\n- ابتكار ألعاب جديدة\n- تجهيز المسابقات\n- تقسيم الشباب لمجموعات\n- تنظيم وقت اللعب\n- خلق جو حلو في الاجتماع'
-  },
+  
   {
     key: 'hymns',
     emoji: '🎶',
@@ -37,10 +33,24 @@ const TEAMS_DATA = [
     desc: 'مش كل صوت حلو لازم يبقى على المسرح… بس كل قلب بيحب يرنم، ليه مكان معانا.\nحتى لو لسه بتتعلم، تعالى جرّب! ❤️'
   },
   {
-    key: 'content',
-    emoji: '💡',
-    name: 'تيم المحتوى',
-    desc: 'عندك فكرة ممكن تغيّر طريقة تفكير حد؟ بتحب تدور، تقرأ، تناقش وتفكر؟ 🤔 بتعرف تطلع أسئلة مختلفة؟\nإحنا التيم اللي ورا المواضيع اللي بنتكلم فيها في الاجتماع، من المناقشات والمواضيع الروحية للأسئلة اللي بتلمس حياتنا اليومية.\nمش لازم تكون عندك خبرة، المهم فضول وأفكار وحب إنك تتعلم وتشارك.'
+    key: 'social',
+    emoji: '📱',
+    name: 'تيم السوشيال ميديا',
+    desc: 'بتحب التصوير؟ 📸 بتعرف تعمل Reels؟ 🎥 عندك عين حلوة للتصميم؟ 🎨 بتحب تكتب وتطلع أفكار مختلفة؟ 💡\nنخلي الناس تشوف اللي بيحصل في اجتماعنا من خلالك 👀🔥\nمش شرط تكون محترف، المهم تكون عندك الرغبة تتعلم وتجرب ❤️'
+  },
+  {
+    key: 'fun',
+    emoji: '🎉',
+    name: 'التيم الترفيهي',
+    desc: 'لو عندك أفكار ألعاب محدش فكر فيها… لو بتحب المنافسة والضحك… ولو نفسك تخلي كل اجتماع فيه ذكريات 😂🔥\n- ابتكار ألعاب جديدة\n- تجهيز المسابقات\n- تقسيم الشباب لمجموعات\n- تنظيم وقت اللعب\n- خلق جو حلو في الاجتماع'
+  },
+  
+  
+  {
+    key: 'theater',
+    emoji: '🎭',
+    name: 'تيم المسرح',
+    desc: 'لو بتحب التمثيل، لو عندك موهبة في الإلقاء، لو نفسك تخش عالم المسرح… تعالى جرّب معانا! ❤️'
   }
 ];
 
@@ -182,16 +192,18 @@ export default function FormComponent() {
       `}</style>
 
       <div className={styles.hero}>
-        <a href="/dashboard" className={styles.heroEyebrow}>فرصتك تخدم</a>
+        <a href="/dashboard" className={styles.heroEyebrow}>
+          <img src="/osra.png" alt="Logo"  className="w-32 h-32 "/>
+        </a>
         <h1>استمارة اختيار التيم</h1>
-        <p>انضم للتيم اللي بيناسبك وساعدنا نخلي كل اجتماع لا يُنسى</p>
+        <p>انضم للتيم اللي بيناسبك وساعدنا نخلي كل اجتماع ميتنسيش</p>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center">
         {error && <div className={styles.errorMsg}>{error}</div>}
 
         {/* Personal Info */}
-        <div className={styles.card}>
+        <div className={`${styles.card} w-full`}>
           <label className={styles.fieldLabel} htmlFor="name">
             الاسم الكامل *
           </label>
@@ -205,9 +217,9 @@ export default function FormComponent() {
           />
         </div>
 
-        <div className={styles.card}>
+        <div className={`${styles.card} w-full`}>
           <label className={styles.fieldLabel} htmlFor="phone">
-            رقم الهاتف *
+            رقم الهاتف (عليه واتساب) *
           </label>
           <input
             type="tel"
@@ -220,9 +232,9 @@ export default function FormComponent() {
         </div>
 
         {/* Previous Service */}
-        <div className={styles.card}>
+        <div className={`${styles.card} w-full`}>
           <label className={styles.fieldLabel}>
-            هل كنت تخدم معانا قبل كده؟
+            هل خدمت معانا قبل كده؟
           </label>
           <div className={styles.yesnoRow}>
             <label className={`${styles.ynOption} ${formData.prevServed === 'أيوه' ? styles.checked : ''}`}>
@@ -249,9 +261,9 @@ export default function FormComponent() {
 
           {formData.prevServed === 'أيوه' && (
             <div className={styles.subQuestion}>
-              <label className={styles.fieldLabel}>في أنهي التيمات اللي كنت تخدم فيها؟</label>
+              <label className={styles.fieldLabel}>خدمت في ايه؟</label>
               <div className={styles.chipList}>
-                {['تيم السوشيال ميديا', 'تيم الصلاة', 'التيم الترفيهي', 'تيم الترانيم', 'تيم المحتوى', 'حاجة تانية'].map(team => (
+                {['تنظيم', 'السوشيال ميديا', ' الصلاة', ' الالعاب', ' الترانيم', ' المحتوى (ورشة)', 'حاجة تانية'].map(team => (
                   <label key={team} className={`${styles.chip} ${formData.prevTeams.includes(team) ? styles.checked : ''}`}>
                     <input
                       type="checkbox"
@@ -283,9 +295,9 @@ export default function FormComponent() {
         </div>
 
         {/* Current Service */}
-        <div className={styles.card}>
+        <div className={`${styles.card} w-full`}>
           <label className={styles.fieldLabel}>
-            هل أنت بتخدم حالياً مع حد تاني؟
+            هل أنت بتخدم حالياً في كنيستك؟
           </label>
           <div className={styles.yesnoRow}>
             <label className={`${styles.ynOption} ${formData.currentServed === 'أيوه' ? styles.checked : ''}`}>
@@ -312,9 +324,9 @@ export default function FormComponent() {
 
           {formData.currentServed === 'أيوه' && (
             <div className={styles.subQuestion}>
-              <label className={styles.fieldLabel}>فين أنت بتخدم دلوقتي؟</label>
+              <label className={styles.fieldLabel}>بتخدم في ايه؟</label>
               <div className={styles.chipList}>
-                {['تيم السوشيال ميديا', 'تيم الصلاة', 'التيم الترفيهي', 'تيم الترانيم', 'تيم المحتوى', 'حاجة تانية'].map(team => (
+                {['تنظيم', 'السوشيال ميديا', ' الصلاة', ' الالعاب', ' الترانيم', ' المحتوى (ورشة)', 'حاجة تانية'].map(team => (
                   <label key={team} className={`${styles.chip} ${formData.currentTeams.includes(team) ? styles.checked : ''}`}>
                     <input
                       type="checkbox"
@@ -347,9 +359,9 @@ export default function FormComponent() {
 
         {/* Skills */}
         <div className={styles.card}>
-          <label className={styles.fieldLabel}>عندك فين مهارات؟</label>
+          <label className={styles.fieldLabel}>ايه المهارات اللي عندك؟</label>
           <div className={styles.chipList}>
-            {['التصوير', 'التصميم', 'الكتابة', 'الفيديو', 'الموسيقى', 'التنظيم', 'الإدارة', 'حاجة تانية'].map(skill => (
+            {[ 'ترانيم','التصوير', 'التصميم', 'الكتابة', 'مونتاج', 'الموسيقى', 'التنظيم', 'الإدارة', 'حاجة تانية'].map(skill => (
               <label key={skill} className={`${styles.chip} ${formData.skills.includes(skill) ? styles.checked : ''}`}>
                 <input
                   type="checkbox"
@@ -381,7 +393,7 @@ export default function FormComponent() {
 
         {/* Want to Try */}
         <div className={styles.card}>
-          <label className={styles.fieldLabel}>عايز تجرب حاجة جديدة؟</label>
+          <label className={styles.fieldLabel}>عايز تتعلم او تجرب حاجه جديدة ؟</label>
           <div className={styles.chipList}>
             {['التصوير', 'التصميم', 'الكتابة', 'الفيديو', 'الموسيقى', 'التنظيم', 'الإدارة', 'حاجة تانية'].map(want => (
               <label key={want} className={`${styles.chip} ${formData.wantTry.includes(want) ? styles.checked : ''}`}>
@@ -414,13 +426,13 @@ export default function FormComponent() {
         </div>
 
         {/* Teams Selection */}
-        <h2 className={styles.sectionTitle}>اختار التيم اللي بتحب تنضم ليه *</h2>
-        <p className={styles.sectionSub}>اختار تيم واحد على الأقل</p>
+        <h2 className={styles.sectionTitle}>دلوقتي اختار حابب تخدم مع  S.J.S.M.F في انهي تيم</h2>
+        <p className={styles.sectionSub}>تقدر تختار اكتر من تيم </p>
 
         {TEAMS_DATA.map(team => (
           <label
             key={team.key}
-            className={`${styles.team} ${styles[team.key]} ${formData.teams.includes(team.name) ? styles.checked : ''}`}
+            className={`${styles.card} w-full cursor-pointer ${formData.teams.includes(team.name) ? styles.checked : ''}`}
             onClick={() => handleTeamToggle(team.name)}
           >
             <div className={styles.teamHead}>
@@ -428,7 +440,9 @@ export default function FormComponent() {
                 type="checkbox"
                 value={team.name}
                 checked={formData.teams.includes(team.name)}
-                onChange={() => {}}
+                onChange={() => {
+                  handleTeamToggle(team.name);
+                }}
               />
               <span className={styles.teamEmoji}>{team.emoji}</span>
               <span className={styles.teamName}>{team.name}</span>
@@ -439,8 +453,8 @@ export default function FormComponent() {
 
         {teamError && <p className={styles.errorMsg}>من فضلك اختار تيم واحد على الأقل.</p>}
 
-        {/* Notes */}
-        <div className={styles.card} style={{ marginTop: '8px' }}>
+        {/* Notes */} 
+        <div className={`${styles.card} w-full`} style={{ marginTop: '8px' }}>
           <label className={styles.fieldLabel} htmlFor="notes">
             حابب تضيف حاجة؟ (اختياري)
           </label>
