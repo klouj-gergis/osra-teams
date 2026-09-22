@@ -193,7 +193,7 @@ export default function FormComponent() {
 
       <div className={styles.hero}>
         <a href="/dashboard" className={styles.heroEyebrow}>
-          <img src="/osra.png" alt="Logo"  className="w-32 h-32 " width={52} height={52}/>
+          <img src="/osra.png" alt="Logo"  className="w-32 h-32 " width={150} height={150}/>
         </a>
         <h1>استمارة اختيار التيم</h1>
         <p>انضم للتيم اللي بيناسبك وساعدنا نخلي كل اجتماع ميتنسيش</p>
