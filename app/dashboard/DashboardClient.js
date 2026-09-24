@@ -124,11 +124,11 @@ export default function DashboardClient({ username }) {
           )}
         </h2>
 
-        {submissions ? (
+        {filteredSubmissions.length === 0 ? (
           <p className={styles.noData}>لا توجد ردود حتى الآن</p>
         ) : (
           <div className={styles.submissionsList}>
-            {submissions.map((submission) => (
+            {filteredSubmissions.map((submission) => (
               <div key={submission.id} className={styles.submissionItem}>
                 <button
                   className={styles.submissionHeader}
