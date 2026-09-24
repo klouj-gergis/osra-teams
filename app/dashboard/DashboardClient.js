@@ -147,19 +147,19 @@ export default function DashboardClient({ username }) {
                   <div className={styles.submissionDetails}>
                     <div className={styles.detail}>
                       <strong>التيمات:</strong>
-                      <div className={`flex justify-end text-bold ${styles.teams}`}>
+                      <div className={` text-bold ${styles.teams}`}>
                         {submission.teams.map((team, idx) => (
-                          <div className="flex flex-col items-start space-y-1" key={idx}>
-                          <span key={idx} className={styles.teamBadge}>
+                          <div className="flex flex-col items-end space-y-1" key={idx}>
+                          <span key={idx} className={` ${styles.teamBadge} text-bold`}>
                             {team}
                           </span>
                           
-                          <span>Currently serving: {submission.currentServed}</span>
-                          <span>Current teams: {submission.currentTeams.join(', ') || "no current teams"}</span>
-                          <span>Previously served: {submission.prevServed}</span>
-                          <span>Previous teams: {submission.prevTeams.join(', ') || "no previous teams"}</span>
-                          <span>Skills: {submission.skills.map((skill) => <span key={skill}>{skill}</span>) || "no skills"}</span>
-                          <span>Served before: {submission.prevServed}</span>
+                          <span className=" text-bold">Currently serving: {submission.currentServed}</span>
+                          <span className=" text-bold">Current teams: {submission.currentTeams.join(', ') || "no current teams"}</span>
+                          <span className=" text-bold">Previously served: {submission.prevServed}</span>
+                          <span className=" text-bold">Previous teams: {submission.prevTeams.join(', ') || "no previous teams"}</span>
+                          <span className=" text-bold">Skills: {submission.skills.map((skill) => <span key={skill}>{skill}</span>) || "no skills"}</span>
+                          <span className=" text-bold">Served before: {submission.prevServed}</span>
                         </div>
                         ))}
                         
