@@ -148,10 +148,20 @@ export default function DashboardClient({ username }) {
                       <strong>التيمات:</strong>
                       <div className={styles.teams}>
                         {submission.teams.map((team, idx) => (
+                          <div>
                           <span key={idx} className={styles.teamBadge}>
                             {team}
                           </span>
+                          
+                          <span>{submission.currentServed}</span>
+                          <span>{submission.currentTeams.map((t) => t.name).join(', ')}</span>
+                          <span>{submission.prevServed}</span>
+<span>{submission.prevTeams.map((t) => t.name).join(', ')}</span>
+<span>{submission.skills.map((t) => t.name).join(', ')}</span>
+<span>{submission.wantTry.map((t) => t.name).join(', ')}</span>
+                        </div>
                         ))}
+                        
                       </div>
                     </div>
 
