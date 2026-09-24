@@ -154,11 +154,11 @@ export default function DashboardClient({ username }) {
                           </span>
                           
                           <span>{submission.currentServed}</span>
-                          <span>{submission.currentTeams.map((t) => t.name).join(', ')}</span>
+                          {
+                            submission.currentTeams.map((t) => (<span key={t.name}>{t.name}</span>))
+                          }
                           <span>{submission.prevServed}</span>
-<span>{submission.prevTeams.map((t) => t.name).join(', ')}</span>
-<span>{submission.skills.map((t) => t.name).join(', ')}</span>
-<span>{submission.wantTry.map((t) => t.name).join(', ')}</span>
+
                         </div>
                         ))}
                         
