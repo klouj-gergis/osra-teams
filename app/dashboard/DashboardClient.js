@@ -30,6 +30,7 @@ const TEAM_EMOJIS = {
 
 export default function DashboardClient({ username }) {
   const [stats, setStats] = useState(null);
+  const [submissions, setSubmissions] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -47,6 +48,18 @@ export default function DashboardClient({ username }) {
         console.error(err);
       } finally {
         setLoading(false);
+      }
+
+      try{
+        const response = await fetch('/api/formSubmissions');
+        if (!response.ok) throw new Error('Failed to fetch submissions');
+        const data = await response.json();
+        setSubmissions(prevStats => ({ ...prevStats, submissions: data }));
+      }catch (err){
+        setError('خطأ في تحميل التسجيلات')
+        console.error(err)
+      }finally{
+        setLoading(false)
       }
     };
 
@@ -123,11 +136,11 @@ export default function DashboardClient({ username }) {
           )}
         </h2>
 
-        {filteredSubmissions.length === 0 ? (
+        {submissions.length === 0 ? (
           <p className={styles.noData}>لا توجد ردود حتى الآن</p>
         ) : (
           <div className={styles.submissionsList}>
-            {filteredSubmissions.map((submission) => (
+            {submissions.map((submission) => (
               <div key={submission.id} className={styles.submissionItem}>
                 <button
                   className={styles.submissionHeader}
@@ -154,7 +167,7 @@ export default function DashboardClient({ username }) {
                           </span>
                           
                           <span>{submission.currentServed}</span>
-                          <span>{submission.skills[0]}</span>
+                          <span>{submission.skills}</span>
                           <span>{submission.prevServed}</span>
 
                         </div>
