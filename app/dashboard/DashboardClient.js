@@ -155,11 +155,10 @@ export default function DashboardClient({ username }) {
                           </span>
                           
                           <span className=" text-bold">يخدم حاليا: {submission.currentServed}</span>
-                          <span className=" text-bold">Current teams: {submission.currentTeams.join(', ') || "no current teams"}</span>
-                          <span className=" text-bold">Previously served: {submission.prevServed}</span>
-                          <span className=" text-bold">Previous teams: {submission.prevTeams.join(', ') || "no previous teams"}</span>
-                          <span className=" text-bold">Skills: {submission.skills.map((skill) => <span key={skill}>{skill}</span>) || "no skills"}</span>
-                          <span className=" text-bold">Served before: {submission.prevServed}</span>
+                          <span className=" text-bold">التيمات الحالية: {submission.currentTeams.join(', ') || "no current teams"}</span>
+                          <span className=" text-bold">يخدم سابقًا: {submission.prevServed}</span>
+                          <span className=" text-bold">التيمات السابقة: {submission.prevTeams.join(', ') || "no previous teams"}</span>
+                          <span className=" text-bold">المهارات: {submission.skills.map((skill) => <span key={skill}>{skill}</span>) || "no skills"}</span>
                         </div>
                         ))}
                         
