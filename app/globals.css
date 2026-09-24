@@ -92,7 +92,7 @@ textarea {
 }
 
 
-:global(html, body) {
+:global( body) {
   margin: 0;
   padding: 0;
   background: var(--parchment);

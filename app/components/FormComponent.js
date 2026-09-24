@@ -432,7 +432,7 @@ export default function FormComponent() {
         {TEAMS_DATA.map(team => (
           <label
             key={team.key}
-            className={` w-full cursor-pointer ${styles.card} ${formData.teams.includes(team.name) ? styles.checked : ''}`}
+            className={` w-full cursor-pointer ${styles.card} }`}
             onClick={() => handleTeamToggle(team.name)}
             style={{ padding: '12px'}}
           >
