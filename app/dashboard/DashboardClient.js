@@ -137,11 +137,6 @@ export default function DashboardClient({ username }) {
                   <div>
                     <strong>{submission.name}</strong>
                     <span className={styles.phone}>{submission.phone}</span>
-                    {
-                      submission.prevTeams.map((t) => (
-                        <span>Served before: {submission.prevServed}</span>
-                      ))
-                    }
                   </div>
                   <span className={styles.arrow}>
                     {expandedSubmission === submission.id ? '▼' : '▶'}
@@ -159,10 +154,12 @@ export default function DashboardClient({ username }) {
                             {team}
                           </span>
                           
-                          <span>{submission.currentServed}</span>
-                          <span>{submission.skills}</span>
-                          <span>{submission.prevServed}</span>
-
+                          <span>Currently serving: {submission.currentServed}</span>
+                          <span>Current teams: {submission.currentTeams.join(', ')}</span>
+                          <span>Previously served: {submission.prevServed}</span>
+                          <span>Previous teams: {submission.prevTeams.join(', ')}</span>
+                          <span>Skills: {submission.skills.map((skill) => <span key={skill}>{skill}</span>)}</span>
+                          <span>Served before: {submission.prevServed}</span>
                         </div>
                         ))}
                         
