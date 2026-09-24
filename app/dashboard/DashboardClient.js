@@ -147,9 +147,9 @@ export default function DashboardClient({ username }) {
                   <div className={styles.submissionDetails}>
                     <div className={styles.detail}>
                       <strong>التيمات:</strong>
-                      <div className={` text-bold ${styles.teams}`}>
+                      <div className={`w-full text-bold ${styles.teams}`}>
                         {submission.teams.map((team, idx) => (
-                          <div className="flex flex-col items-end space-y-1" key={idx}>
+                          <div className="flex flex-col w-full items-start space-y-1" key={idx}>
                           <span key={idx} className={` ${styles.teamBadge} text-bold`}>
                             {team}
                           </span>
