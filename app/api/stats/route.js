@@ -59,6 +59,7 @@ export async function GET(request) {
         currentTeams: sub.currentTeams,
         skills: sub.skills,
         notes: sub.notes,
+        wantTry: sub.wantTry,
         submittedAt: sub.submittedAt,
       })),
     };
