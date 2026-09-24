@@ -136,7 +136,7 @@ export default function DashboardClient({ username }) {
           )}
         </h2>
 
-        {submissions.length === 0 ? (
+        {submissions ? (
           <p className={styles.noData}>لا توجد ردود حتى الآن</p>
         ) : (
           <div className={styles.submissionsList}>
