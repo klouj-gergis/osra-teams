@@ -53,6 +53,8 @@ export async function GET(request) {
         name: sub.name,
         phone: sub.phone,
         teams: sub.teams,
+        prevServed: sub.prevServed,
+        prevTeams: sub.prevTeams,
         notes: sub.notes,
         submittedAt: sub.submittedAt,
       })),

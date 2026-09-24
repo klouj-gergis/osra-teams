@@ -49,24 +49,7 @@ export default function DashboardClient({ username }) {
         console.error(err);
       } finally {
         setLoading(false);
-      }
-
-      try{
-        const response = await prisma.submission.findMany({
-          orderBy: {
-            submittedAt: 'desc',
-          },
-        });
-        if (!response.ok) throw new Error('Failed to fetch submissions');
-        const data = await response.json();
-        setSubmissions(prevStats => ({ ...prevStats, submissions: data }));
-      }catch (err){
-        setError('خطأ في تحميل التسجيلات')
-        console.error(err)
-      }finally{
-        setLoading(false)
-      }
-    };
+      }}
 
     fetchStats();
   }, []);
@@ -154,6 +137,11 @@ export default function DashboardClient({ username }) {
                   <div>
                     <strong>{submission.name}</strong>
                     <span className={styles.phone}>{submission.phone}</span>
+                    {
+                      submission.prevTeams.map((t) => (
+                        <span>Served before: {submission.prevServed}</span>
+                      ))
+                    }
                   </div>
                   <span className={styles.arrow}>
                     {expandedSubmission === submission.id ? '▼' : '▶'}
