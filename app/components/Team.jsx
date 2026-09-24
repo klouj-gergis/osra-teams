@@ -1,10 +1,11 @@
 import React from 'react'
+import './FormComponent.module.css'
 
 export default function Team({ team, handleTeamToggle, formData }) {
   return (
     <label
             key={team.key}
-            className="border p-2 rounded-lg cursor-pointer hover:bg-gray-100"
+            className=" card"
             onClick={() => handleTeamToggle(team.name)}
           >
             <div className="flex items-center space-x-2">
