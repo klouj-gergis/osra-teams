@@ -149,12 +149,12 @@ export default function DashboardClient({ username }) {
                       <strong>التيمات:</strong>
                       <div className={`w-full text-bold ${styles.teams}`}>
                         {submission.teams.map((team, idx) => (
-                          <div className="flex flex-col w-full items-start space-y-1" key={idx}>
+                          <div className="flex flex-col w-full items-start p-5 gap-2 space-y-1" key={idx}>
                           <span key={idx} className={` ${styles.teamBadge} text-bold`}>
                             {team}
                           </span>
                           
-                          <span className=" text-bold">Currently serving: {submission.currentServed}</span>
+                          <span className=" text-bold">يخدم حاليا: {submission.currentServed}</span>
                           <span className=" text-bold">Current teams: {submission.currentTeams.join(', ') || "no current teams"}</span>
                           <span className=" text-bold">Previously served: {submission.prevServed}</span>
                           <span className=" text-bold">Previous teams: {submission.prevTeams.join(', ') || "no previous teams"}</span>
