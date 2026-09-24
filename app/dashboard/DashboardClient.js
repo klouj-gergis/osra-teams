@@ -149,7 +149,7 @@ export default function DashboardClient({ username }) {
                       <strong>التيمات:</strong>
                       <div className={styles.teams}>
                         {submission.teams.map((team, idx) => (
-                          <div>
+                          <div className="flex flex-col items-start space-y-1" key={idx}>
                           <span key={idx} className={styles.teamBadge}>
                             {team}
                           </span>
