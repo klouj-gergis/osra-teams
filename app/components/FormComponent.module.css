@@ -153,41 +153,6 @@
 
 
 
-
-.teamHead {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-  direction: rtl;
-}
-
-.teamHead input[type='checkbox'] {
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  margin: 0;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.teamEmoji {
-  font-size: 22px;
-  line-height: 1;
-}
-
-.teamName {
-  font-size: 17px;
-  font-weight: 900;
-}
-
-.teamDesc {
-  font-size: 14px;
-  color: #4a3f33;
-  white-space: pre-line;
-}
-
-
 .submitBtn {
   width: 100%;
   padding: 16px;
