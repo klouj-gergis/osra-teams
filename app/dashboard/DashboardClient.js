@@ -154,7 +154,7 @@ export default function DashboardClient({ username }) {
                           </span>
                           
                           <span>{submission.currentServed}</span>
-                          <span>{submission.skills}</span>
+                          <span>{submission.skills[0]}</span>
                           <span>{submission.prevServed}</span>
 
                         </div>
