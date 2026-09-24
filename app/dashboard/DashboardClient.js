@@ -136,7 +136,9 @@ export default function DashboardClient({ username }) {
                 >
                   <div>
                     <strong>{submission.name}</strong>
-                    <span className={styles.phone}>{submission.phone}</span>
+                    <a href={`tel:${submission.phone}`} className={styles.teamBadge}>
+                      {submission.phone}
+                    </a>
                   </div>
                   <span className={styles.arrow}>
                     {expandedSubmission === submission.id ? '▼' : '▶'}
