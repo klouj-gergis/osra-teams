@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { signOut } from 'next-auth/react';
 import styles from './DashboardClient.module.css';
-import { prisma } from '@/app/lib/prisma';
+import { prisma } from '@/lib/prisma';
 
 const TEAM_NAMES = {
   social: 'تيم السوشيال ميديا',
