@@ -19,6 +19,7 @@ const TEAM_COLORS = {
   prayer: '#8B3A3A',
   fun: '#B8792A',
   hymns: '#6A5590',
+  content: '#3D6B47',
   content: '#3D6B47'
 };
 
