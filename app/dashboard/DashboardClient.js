@@ -10,7 +10,8 @@ const TEAM_NAMES = {
   prayer: 'تيم الصلاة',
   fun: 'التيم الترفيهي',
   hymns: 'تيم الترانيم',
-  content: 'تيم المحتوى'
+  content: 'تيم المحتوى',
+  theater: 'تيم مسرح'
 };
 
 const TEAM_COLORS = {
@@ -26,7 +27,8 @@ const TEAM_EMOJIS = {
   prayer: '🙏',
   fun: '🎉',
   hymns: '🎶',
-  content: '💡'
+  content: '💡',
+  theater: '💡'
 };
 
 export default function DashboardClient({ username }) {
