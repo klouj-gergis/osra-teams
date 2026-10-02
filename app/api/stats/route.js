@@ -23,7 +23,7 @@ export async function GET(request) {
       "التيم الترفيهي": "fun",
       "تيم الترانيم": "hymns",
       "تيم المحتوى": "content",
-      "تيم مسرح": "theater"
+      "تيم المسرح": "theater"
     };
 
     // Count teams
