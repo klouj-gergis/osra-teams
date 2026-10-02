@@ -155,9 +155,7 @@ export default function DashboardClient({ username }) {
                       <div className={`w-full text-bold ${styles.teams}`}>
                         {submission.teams.map((team, idx) => (
                           <div className="flex flex-col w-full items-start p-5 gap-2 space-y-1" key={idx}>
-                          <span key={idx} className={` ${styles.teamBadge} text-bold`}>
-                            {team}
-                          </span>
+                         
                           
                           <span className=" text-bold">ت/يخدم في SJSMF: {submission.currentServed}</span>
                           <span className=" text-bold">خدمته/ا في SJSMF: {submission.currentTeams.join(', ') || "no current teams"}</span>
