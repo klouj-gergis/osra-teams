@@ -154,20 +154,21 @@ export default function DashboardClient({ username }) {
                       <strong>التيمات:</strong>
                       <div className={`w-full text-bold ${styles.teams}`}>
                         {submission.teams.map((team, idx) => (
-                          <div className="flex flex-col w-full items-start p-5 gap-2 space-y-1" key={idx}>
+                          <div className="flex w-full items-start p-5 gap-2 space-y-1" key={idx}>
                           <span key={idx} className={` ${styles.teamBadge} text-bold`}>
                             {team}
                           </span>
                           
                           </div>
                         ))}
+                          <div className="flex flex-col w-full items-start p-5 gap-2 space-y-1">
                          <span className=" text-bold">ت/يخدم في SJSMF: {submission.currentServed}</span>
                           <span className=" text-bold">خدمته/ا في SJSMF: {submission.currentTeams.join(', ') || "no current teams"}</span>
                           <span className=" text-bold">ت/يخدم في كنيسته/ا: {submission.prevServed}</span>
                           <span className=" text-bold"> خدمته/ا في كنيسته/ا: {submission.prevTeams.join(', ') || "no previous teams"}</span>
                           <span className=" text-bold">المهارات: {submission.skills.map((skill) => <span key={skill}>{skill}</span>) || "no skills"}</span>
                           <span className=" text-bold">مهارات عاوز/ه يتعلمها: {submission.wantTry.join(', ') || "no wanted skills"}</span>
-                       
+                          </div>
                       </div>
                     </div>
 
