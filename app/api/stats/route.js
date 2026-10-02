@@ -23,6 +23,7 @@ export async function GET(request) {
       "التيم الترفيهي": "fun",
       "تيم الترانيم": "hymns",
       "تيم المحتوى": "content",
+      "تيم مسرح": "theater"
     };
 
     // Count teams
@@ -32,6 +33,7 @@ export async function GET(request) {
       fun: 0,
       hymns: 0,
       content: 0,
+      theater: 0,
     };
 
     submissions.forEach((submission) => {
