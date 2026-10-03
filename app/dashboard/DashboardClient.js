@@ -11,7 +11,7 @@ const TEAM_NAMES = {
   fun: 'التيم الترفيهي',
   hymns: 'تيم الترانيم',
   content: 'تيم المحتوى',
-  theater: 'تيم مسرح'
+  theater: 'تيم المسرح'
 };
 
 const TEAM_COLORS = {
@@ -20,7 +20,7 @@ const TEAM_COLORS = {
   fun: '#B8792A',
   hymns: '#6A5590',
   content: '#3D6B47',
-  content: '#3D6B47'
+  theater: '#3D6B47'
 };
 
 const TEAM_EMOJIS = {
